@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "title": "Scaling Distributed Systems with Go",
+    "speakers": ["Sarah Chen"],
+    "categories": ["Go", "Distributed Systems", "Cloud"],
+    "start_time": "10:00",
+    "end_time": "11:00",
+    "duration": "60 min",
+    "description": "Learn the patterns and pitfalls of building highly available systems that scale to millions of users using Go's concurrency primitives."
+  },
+  {
+    "id": 2,
+    "title": "The Future of CSS: Container Queries and Beyond",
+    "speakers": ["Marcus Rivera"],
+    "categories": ["CSS", "Frontend", "Design"],
+    "start_time": "11:10",
+    "end_time": "12:10",
+    "duration": "60 min",
+    "description": "Deep dive into the latest CSS features that are changing the way we approach responsive design and component architecture."
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning for Web Developers",
+    "speakers": ["Dr. Elena Rossi"],
+    "categories": ["AI", "JavaScript", "Machine Learning"],
+    "start_time": "12:20",
+    "end_time": "13:20",
+    "duration": "60 min",
+    "description": "Explore how to integrate pre-trained ML models directly into your frontend applications using TensorFlow.js and ONNX."
+  },
+  {
+    "id": "lunch",
+    "title": "Lunch Break",
+    "type": "break",
+    "start_time": "13:20",
+    "end_time": "14:20",
+    "duration": "60 min",
+    "description": "Enjoy a catered lunch and networking session in the main hall."
+  },
+  {
+    "id": 4,
+    "title": "Security-First: Modern Auth Patterns",
+    "speakers": ["James Wilson", "Leila Amin"],
+    "categories": ["Security", "Auth", "Backend"],
+    "start_time": "14:20",
+    "end_time": "15:20",
+    "duration": "60 min",
+    "description": "A comprehensive look at Passkeys, WebAuthn, and the transition away from traditional password-based authentication."
+  },
+  {
+    "id": 5,
+    "title": "Building Accessible React Apps",
+    "speakers": ["Aisha Khan"],
+    "categories": ["React", "Accessibility", "A11y"],
+    "start_time": "15:30",
+    "end_time": "16:30",
+    "duration": "60 min",
+    "description": "Practical strategies for ensuring your React components are usable by everyone, covering focus management and ARIA best practices."
+  },
+  {
+    "id": 6,
+    "title": "Observability at Scale",
+    "speakers": ["David Miller"],
+    "categories": ["DevOps", "SRE", "Cloud"],
+    "start_time": "16:40",
+    "end_time": "17:40",
+    "duration": "60 min",
+    "description": "Moving beyond logs and metrics: How to implement distributed tracing and structured observability in complex microservices."
+  }
+]

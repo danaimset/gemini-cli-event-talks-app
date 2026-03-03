@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSummit 2026 | Full Schedule</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechSummit 2026</h1>
+            <p class="subtitle">1 Day. 6 Technical Deep Dives. Infinite Inspiration.</p>
+        </div>
+    </header>
+
+    <section class="controls">
+        <div class="container">
+            <div class="search-wrapper">
+                <input type="text" id="categorySearch" placeholder="Filter by category (e.g. AI, React, Cloud)..." aria-label="Search talks by category">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div id="schedule" class="schedule-grid">
+            <!-- Schedule items will be injected here -->
+            <div class="loading">Loading schedule...</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TechSummit. Built with Node.js & Vanilla Web Tech.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
