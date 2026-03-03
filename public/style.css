@@ -175,6 +175,13 @@ header h1 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-tag:hover {
+    background-color: var(--primary);
+    color: white;
 }
 
 /* Loading/Empty States */

@@ -61,21 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('');
     }
 
-    // Filter talks based on search input
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        
-        // Filter normal talks based on categories or speakers
+    // Helper to apply the filter and re-render the schedule
+    function applyFilter(searchTerm) {
+        searchTerm = searchTerm.toLowerCase();
+
         const filteredTalks = allTalks.filter(item => {
-            // Always show the lunch break
             if (item.type === 'break') return true;
             
-            // Check categories
-            const categoryMatch = item.categories.some(category => 
-                category.toLowerCase().includes(searchTerm)
+            const categoryMatch = item.categories.some(cat => 
+                cat.toLowerCase().includes(searchTerm)
             );
             
-            // Check speakers
             const speakerMatch = item.speakers.some(speaker => 
                 speaker.toLowerCase().includes(searchTerm)
             );
@@ -84,6 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         renderSchedule(filteredTalks);
+    }
+
+    // Filter talks based on search input
+    searchInput.addEventListener('input', (e) => {
+        applyFilter(e.target.value);
+    });
+
+    // Event delegation for clickable category tags
+    scheduleContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('category-tag')) {
+            const selectedCategory = e.target.textContent;
+            searchInput.value = selectedCategory; // Update the UI
+            applyFilter(selectedCategory); // Trigger the filter
+            
+            // Smooth scroll to top to see results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     });
 
     // Initialize
