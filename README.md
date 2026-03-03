@@ -6,7 +6,7 @@ A modern, responsive, and data-driven one-page website for a 1-day technical con
 
 - **Automated Timeline:** Displays a 1-day schedule starting at 10:00 AM with 6 one-hour technical talks.
 - **Smart Transitions:** Automatically includes 10-minute transition periods between talks and a 1-hour lunch break.
-- **Real-time Search:** Instantly filter talks by category keywords (e.g., "AI", "Cloud", "Frontend").
+- **Real-time Search:** Instantly filter talks by category keywords or speaker names (e.g., "AI", "Sarah Rivera").
 - **Responsive Design:** A "Tech Blue" themed UI optimized for both desktop and mobile viewing.
 - **Data-Driven Architecture:** Schedule content is decoupled into a JSON file for easy updates without code changes.
 

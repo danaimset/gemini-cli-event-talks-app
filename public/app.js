@@ -65,15 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
         
-        // Filter normal talks based on categories
+        // Filter normal talks based on categories or speakers
         const filteredTalks = allTalks.filter(item => {
             // Always show the lunch break
             if (item.type === 'break') return true;
             
-            // Check if any category matches the search term
-            return item.categories.some(category => 
+            // Check categories
+            const categoryMatch = item.categories.some(category => 
                 category.toLowerCase().includes(searchTerm)
             );
+            
+            // Check speakers
+            const speakerMatch = item.speakers.some(speaker => 
+                speaker.toLowerCase().includes(searchTerm)
+            );
+
+            return categoryMatch || speakerMatch;
         });
 
         renderSchedule(filteredTalks);
