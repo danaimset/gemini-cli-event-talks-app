@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const scheduleContainer = document.getElementById('schedule');
     const searchInput = document.getElementById('categorySearch');
+    const clearBtn = document.getElementById('clearSearch');
     let allTalks = [];
 
     // Fetch talks data from API
@@ -84,7 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter talks based on search input
     searchInput.addEventListener('input', (e) => {
-        applyFilter(e.target.value);
+        const val = e.target.value;
+        clearBtn.style.display = val.length > 0 ? 'flex' : 'none';
+        applyFilter(val);
+    });
+
+    // Clear search functionality
+    clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        applyFilter('');
+        searchInput.focus();
     });
 
     // Event delegation for clickable category tags
@@ -92,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.classList.contains('category-tag')) {
             const selectedCategory = e.target.textContent;
             searchInput.value = selectedCategory; // Update the UI
+            clearBtn.style.display = 'flex'; // Show the clear button
             applyFilter(selectedCategory); // Trigger the filter
             
             // Smooth scroll to top to see results

@@ -75,6 +75,23 @@ header h1 {
     font-family: inherit;
 }
 
+.clear-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0 10px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.clear-btn:hover {
+    color: var(--primary);
+}
+
 .search-icon {
     font-size: 1.2rem;
     color: var(--text-muted);
